@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5D647C71291B49EC000FAB24 /* todolistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647C70291B49EC000FAB24 /* todolistApp.swift */; };
-		5D647C73291B49EC000FAB24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647C72291B49EC000FAB24 /* ContentView.swift */; };
 		5D647C75291B49ED000FAB24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D647C74291B49ED000FAB24 /* Assets.xcassets */; };
 		5D647C78291B49ED000FAB24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D647C77291B49ED000FAB24 /* Preview Assets.xcassets */; };
 		5D647C82291B49ED000FAB24 /* todolistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647C81291B49ED000FAB24 /* todolistTests.swift */; };
 		5D647C8C291B49ED000FAB24 /* todolistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647C8B291B49ED000FAB24 /* todolistUITests.swift */; };
 		5D647C8E291B49ED000FAB24 /* todolistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647C8D291B49ED000FAB24 /* todolistUITestsLaunchTests.swift */; };
+		5D647C9C291BE4ED000FAB24 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647C9B291BE4ED000FAB24 /* ListView.swift */; };
+		5D647C9E291BF8B3000FAB24 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647C9D291BF8B3000FAB24 /* ListRowView.swift */; };
+		5D647CA0291BFC4C000FAB24 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647C9F291BFC4C000FAB24 /* AddView.swift */; };
+		5D647CA3291C6305000FAB24 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647CA2291C6305000FAB24 /* ItemModel.swift */; };
+		5D647CA6291C6CA8000FAB24 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D647CA5291C6CA8000FAB24 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		5D647C6D291B49EC000FAB24 /* todolist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todolist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D647C70291B49EC000FAB24 /* todolistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistApp.swift; sourceTree = "<group>"; };
-		5D647C72291B49EC000FAB24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D647C74291B49ED000FAB24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D647C77291B49ED000FAB24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D647C7D291B49ED000FAB24 /* todolistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todolistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,11 @@
 		5D647C87291B49ED000FAB24 /* todolistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todolistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D647C8B291B49ED000FAB24 /* todolistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistUITests.swift; sourceTree = "<group>"; };
 		5D647C8D291B49ED000FAB24 /* todolistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D647C9B291BE4ED000FAB24 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		5D647C9D291BF8B3000FAB24 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		5D647C9F291BFC4C000FAB24 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		5D647CA2291C6305000FAB24 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		5D647CA5291C6CA8000FAB24 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				5D647C70291B49EC000FAB24 /* todolistApp.swift */,
-				5D647C72291B49EC000FAB24 /* ContentView.swift */,
+				5D647CA1291C62EC000FAB24 /* Models */,
+				5D647CA4291C6C72000FAB24 /* ViewModels */,
+				5D647C9A291BE4DD000FAB24 /* Views */,
 				5D647C74291B49ED000FAB24 /* Assets.xcassets */,
 				5D647C76291B49ED000FAB24 /* Preview Content */,
 			);
@@ -125,6 +135,32 @@
 				5D647C8D291B49ED000FAB24 /* todolistUITestsLaunchTests.swift */,
 			);
 			path = todolistUITests;
+			sourceTree = "<group>";
+		};
+		5D647C9A291BE4DD000FAB24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D647C9B291BE4ED000FAB24 /* ListView.swift */,
+				5D647C9F291BFC4C000FAB24 /* AddView.swift */,
+				5D647C9D291BF8B3000FAB24 /* ListRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5D647CA1291C62EC000FAB24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D647CA2291C6305000FAB24 /* ItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D647CA4291C6C72000FAB24 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5D647CA5291C6CA8000FAB24 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D647C73291B49EC000FAB24 /* ContentView.swift in Sources */,
+				5D647CA3291C6305000FAB24 /* ItemModel.swift in Sources */,
+				5D647CA0291BFC4C000FAB24 /* AddView.swift in Sources */,
+				5D647CA6291C6CA8000FAB24 /* ListViewModel.swift in Sources */,
 				5D647C71291B49EC000FAB24 /* todolistApp.swift in Sources */,
+				5D647C9C291BE4ED000FAB24 /* ListView.swift in Sources */,
+				5D647C9E291BF8B3000FAB24 /* ListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
