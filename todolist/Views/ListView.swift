@@ -12,20 +12,26 @@ struct ListView: View {
     @EnvironmentObject var listViewModel: ListViewModel
     
     var body: some View {
-        List {
-            ForEach(listViewModel.items){ item in
-                ListRowView(item: item)
-                    .onTapGesture {
-                        withAnimation(.easeInOut(duration: 0.2)){
-                            listViewModel.updateItem(item: item)
-                        }
+        ZStack{
+            if listViewModel.items.isEmpty {
+                NoItemsView()
+            } else {
+                List {
+                    ForEach(listViewModel.items){ item in
+                        ListRowView(item: item)
+                            .onTapGesture {
+                                withAnimation(.easeInOut(duration: 0.2)){
+                                    listViewModel.updateItem(item: item)
+                                }
+                            }
                     }
+                    .onDelete(perform: listViewModel.deleteItem)
+                    .onMove(perform: listViewModel.moveItem)
+                }
+                .padding(.top, 20)
+                .background(Color.backgroundColor)
             }
-            .onDelete(perform: listViewModel.deleteItem)
-            .onMove(perform: listViewModel.moveItem)
         }
-        .padding(.top, 20)
-        .background(Color(UIColor.systemGray6))
         .navigationTitle("Todo List 📝")
         .toolbar{
             ToolbarItem(placement: .navigationBarLeading){
@@ -36,6 +42,10 @@ struct ListView: View {
             }
         }
     }
+}
+
+extension Color{
+    static let backgroundColor: Color = Color("backgroundColor")
 }
 
 struct ListView_Previews: PreviewProvider {
